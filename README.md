@@ -8,9 +8,34 @@ A revolutionary stable token pegged to BTC with 50% on-chain reserve. Native on 
 BRVBTC is not just another stablecoin. It's a hybrid between a stable asset and a Bitcoin-backed reserve token, designed to offer stability, transparency, and decentralization — all powered by real WBTC and immutable smart contracts.
 
 ---
+## 🏷️ **Badges & Verifications**
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Solidity](https://img.shields.io/badge/Solidity-^0.8.27-blue)](https://soliditylang.org/)
 [![Foundry](https://img.shields.io/badge/Built%20with-Foundry-FFDB1C)](https://book.getfoundry.sh/)
+
+### 🔐 Security
+[![Security: No vulnerabilities](https://img.shields.io/badge/Security-No%20vulnerabilities-brightgreen)](https://github.com/josat123/BRVBTC/security)
+[![Ownership: Renounced (DBTC)](https://img.shields.io/badge/DBTC%20Owner-0x000...000-blue)](https://etherscan.io/address/0xe972BbB8bB357418131951CcEaec9d8A5993bea2#readContract)
+
+### ✅ Verification
+[![Contract Verified](https://img.shields.io/badge/Contract-Verified-success)](https://polygonscan.com/address/0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB#code)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+### ⛓️ Chains
+[![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=flat&logo=ethereum&logoColor=white)](https://ethereum.org)
+[![Polygon](https://img.shields.io/badge/Polygon-8247E5?style=flat&logo=polygon&logoColor=white)](https://polygon.technology)
+
+### 📍 Contract Addresses
+[![Ethereum Contract](https://img.shields.io/badge/ETH%20Contract-0x9bc0F4...-blue)](https://etherscan.io/address/0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d)
+[![Polygon Contract](https://img.shields.io/badge/Polygon%20Contract-0xa5c96d...-purple)](https://polygonscan.com/address/0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB)
+
+### 🌉 Bridge
+[![Bridge L1](https://img.shields.io/badge/Bridge%20L1-0xe8681d...-green)](https://etherscan.io/address/0xe8681d55585FcDA6a4a39c9a59f39b63fbBa88e8)
+[![Bridge L2](https://img.shields.io/badge/Bridge%20L2-0x0Ef6a6...-orange)](https://polygonscan.com/address/0x0Ef6a63a16fB21dD8398183a154596953Ce4E835)
+
+### 💧 Liquidity
+[![Uniswap V4](https://img.shields.io/badge/Uniswap%20V4-Pool-ff69b4)](https://polygonscan.com/address/0x67366782805870060151383f4bbff9dab53e5cd6)
+[![Initial Liquidity](https://img.shields.io/badge/Liquidity-%24100%20initial-blue)](https://polygonscan.com/address/0x67366782805870060151383f4bbff9dab53e5cd6)
 
 ## 📌 Overview
 
