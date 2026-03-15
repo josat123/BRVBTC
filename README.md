@@ -11,7 +11,6 @@ A revolutionary stable token pegged to BTC with 50% on-chain reserve. Native on 
 BRVBTC is not just another stablecoin. It's a hybrid between a stable asset and a Bitcoin-backed reserve token, designed to offer stability, transparency, and decentralization — all powered by real WBTC and immutable smart contracts.
 
 ---
-<p align="center">
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Solidity](https://img.shields.io/badge/Solidity-^0.8.27-blue)](https://soliditylang.org/)
 [![Foundry](https://img.shields.io/badge/Built%20with-Foundry-FFDB1C)](https://book.getfoundry.sh/)
@@ -26,7 +25,7 @@ BRVBTC is not just another stablecoin. It's a hybrid between a stable asset and 
 [![Bridge L2](https://img.shields.io/badge/Bridge%20L2-0x0Ef6a6...-orange)](https://polygonscan.com/address/0x0Ef6a63a16fB21dD8398183a154596953Ce4E835)
 [![Uniswap V4](https://img.shields.io/badge/Uniswap%20V4-Pool-ff69b4)](https://polygonscan.com/address/0x67366782805870060151383f4bbff9dab53e5cd6)
 [![Initial Liquidity](https://img.shields.io/badge/Liquidity-%24100%20initial-blue)](https://polygonscan.com/address/0x67366782805870060151383f4bbff9dab53e5cd6)
-</p>
+
 ## 📌 Overview
 
 | Feature | Value |
