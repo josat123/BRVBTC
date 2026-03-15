@@ -12,7 +12,6 @@ BRVBTC is not just another stablecoin. It's a hybrid between a stable asset and 
 [![Solidity](https://img.shields.io/badge/Solidity-^0.8.27-blue)](https://soliditylang.org/)
 [![Foundry](https://img.shields.io/badge/Built%20with-Foundry-FFDB1C)](https://book.getfoundry.sh/)
 [![Security: No vulnerabilities](https://img.shields.io/badge/Security-No%20vulnerabilities-brightgreen)](https://github.com/josat123/BRVBTC/security)
-[![Ownership: Renounced (BRVBTC)](https://img.shields.io/badge/DBTC%20Owner-0x000...000-blue)](https://etherscan.io/address/0xe972BbB8bB357418131951CcEaec9d8A5993bea2#readContract)
 [![Contract Verified](https://img.shields.io/badge/Contract-Verified-success)](https://polygonscan.com/address/0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB#code)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=flat&logo=ethereum&logoColor=white)](https://ethereum.org)
