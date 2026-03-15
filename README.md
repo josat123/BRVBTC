@@ -1,7 +1,6 @@
 # BRVBTC
 A revolutionary stable token pegged to BTC with 50% on-chain reserve. Native on Ethereum & Polygon.
 
-markdown
 # 🇻🇪 Bolivar Republica Venezuela BTC (BRVBTC)
 
 **A Revolutionary Stable Token Pegged to BTC with 50% On-Chain Reserve**
@@ -9,6 +8,9 @@ markdown
 BRVBTC is not just another stablecoin. It's a hybrid between a stable asset and a Bitcoin-backed reserve token, designed to offer stability, transparency, and decentralization — all powered by real WBTC and immutable smart contracts.
 
 ---
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Solidity](https://img.shields.io/badge/Solidity-^0.8.27-blue)](https://soliditylang.org/)
+[![Foundry](https://img.shields.io/badge/Built%20with-Foundry-FFDB1C)](https://book.getfoundry.sh/)
 
 ## 📌 Overview
 
@@ -265,7 +267,4 @@ Discord/Telegram: (to be announced)
 *"After 4 years of work, two tokens, a cross-chain bridge, and a vision — BRVBTC is finally live. It's not about promises. It's about math, transparency, and real value. 1 BRVBTC = 1 USD, backed by 50% WBTC, available natively on Ethereum and Polygon. We are at 0 today, but the fundamentals are already 100. The rest is up to the community."*
 
 — The BRVBTC Team
----
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Solidity](https://img.shields.io/badge/Solidity-^0.8.27-blue)](https://soliditylang.org/)
-[![Foundry](https://img.shields.io/badge/Built%20with-Foundry-FFDB1C)](https://book.getfoundry.sh/)
+
