@@ -1,6 +1,6 @@
 # BRVBTC
 <p align="center">
-  <img src="DBTC_logo.png" alt="BRVBTC Logo" width="150"/>
+  <img src="BRVBTC_logo.png" alt="BRVBTC Logo" width="150"/>
 </p>
 A revolutionary stable token pegged to BTC with 50% on-chain reserve. Native on Ethereum & Polygon.
 
