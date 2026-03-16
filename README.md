@@ -141,7 +141,7 @@ A **BRVBTC / WBTC** pool is also available on **Uniswap V4** on Ethereum Mainnet
 - **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
 
 > ⚠️ **Note:** The L1 pool uses **native WBTC** (`0x2260FAC5...`), while the L2 pool uses **posWBTC** (`0x1BFD6703...`). Both represent the same underlying Bitcoin value.
----
+
 🔐 Security & Transparency
 Auditable by Design
 Every aspect of BRVBTC is publicly verifiable:
