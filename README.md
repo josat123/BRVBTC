@@ -1,7 +1,8 @@
-<p align="center"> # BRVBTC
-
+<p align="center"> # BRVBTC </p>
+<p align="center">
   <img src="brvbtc.png" alt="BRVBTC" width="150"/>
-
+</p>
+<p align="center">
 A revolutionary stable token pegged to BTC with 50% on-chain reserve. Native on Ethereum & Polygon.
 
 # 🇻🇪 Bolivar Republica Venezuela BTC (BRVBTC)
