@@ -25,7 +25,7 @@
 [![Polygon Contract](https://img.shields.io/badge/Polygon%20Contract-0xa5c96d...-purple)](https://polygonscan.com/address/0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB)
 [![Bridge L1](https://img.shields.io/badge/Bridge%20L1-0xe8681d...-green)](https://etherscan.io/address/0xe8681d55585FcDA6a4a39c9a59f39b63fbBa88e8)
 [![Bridge L2](https://img.shields.io/badge/Bridge%20L2-0x0Ef6a6...-orange)](https://polygonscan.com/address/0x0Ef6a63a16fB21dD8398183a154596953Ce4E835)
-[![Uniswap V4](https://img.shields.io/badge/Uniswap%20V4-Pool-ff69b4)](https://polygonscan.com/address/0x67366782805870060151383f4bbff9dab53e5cd6)
+[![Uniswap V4](https://img.shields.io/badge/Uniswap%20V4-Pool-ff69b4)](https://polygonscan.com/address/0x67366782805870060151383f4bbff9dab53e5cd6)]
 
 ## 📌 Overview
 
