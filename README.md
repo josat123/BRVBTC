@@ -5,7 +5,7 @@
 <p align="center">
 A revolutionary stable token pegged to BTC with 50% on-chain reserve. Native on Ethereum & Polygon.</p>
 <p align="center">
-# 🇻🇪 Bolivar Republica Venezuela BTC (BRVBTC)</p>
+ 🇻🇪 Bolivar Republica Venezuela BTC (BRVBTC)</p>
 <p align="center">
 **A Revolutionary Stable Token Pegged to BTC with 50% On-Chain Reserve**
 </p>
