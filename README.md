@@ -118,23 +118,30 @@ Security: EIP-712 signatures, nonces, onlyMessenger modifiers, replay protection
 
 Fees: Optional (configurable, max 0.3%), currently 0.05%
 
-💧 Liquidity & Trading
-On Polygon (L2)
-A BRVBTC / WBTC pool has been initialized on Uniswap V4:
+## 💧 Liquidity & Trading
 
-Pool Address: 0x67366782805870060151383f4bbff9dab53e5cd6
+### On Polygon (L2)
 
-Currency0 (WBTC): 0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6
+A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 
-Currency1 (BRVBTC): 0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB
+- **Pool Address:** `0x67366782805870060151383f4bbff9dab53e5cd6`
+- **Currency0 (WBTC):** `0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6`
+- **Currency1 (BRVBTC):** `0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB`
+- **Initial Liquidity:** $100 (enables trading and price discovery)
+- **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
 
-Initial Liquidity: $100 (enables trading and price discovery)
+### On Ethereum (L1)
 
-Price: Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
+A **BRVBTC / WBTC** pool is also available on **Uniswap V4** on Ethereum Mainnet:
 
-On Ethereum (L1)
-Liquidity can be added by the community at any time. The bridge ensures that tokens can move freely between chains to maintain price consistency.
+- **Pool Address:** `0x9bc0f4d4b31adea0c7fde6f40a778e4ce7bc652d`
+- **Currency0 (WBTC):** `0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599`
+- **Currency1 (BRVBTC):** `0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d`
+- **Initial Liquidity:** $105 (enables trading and price discovery)
+- **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
 
+> ⚠️ **Note:** The L1 pool uses **native WBTC** (`0x2260FAC5...`), while the L2 pool uses **posWBTC** (`0x1BFD6703...`). Both represent the same underlying Bitcoin value.
+---
 🔐 Security & Transparency
 Auditable by Design
 Every aspect of BRVBTC is publicly verifiable:
