@@ -206,22 +206,6 @@
             color: var(--secondary);
         }
 
-        .btn-connect {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--dark);
-            border: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-connect:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
-        }
-
         /* Hero Section */
         .hero {
             padding: 160px 0 100px;
@@ -559,6 +543,110 @@
             font-size: 0.9rem;
         }
 
+        /* Buy FAQ Section */
+        .buy-faq {
+            padding: 100px 0;
+            background: var(--surface);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .faq-card {
+            background: var(--darker);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .faq-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-align: center;
+        }
+
+        .faq-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--secondary);
+        }
+
+        .faq-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-card h4 {
+            color: var(--light);
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .faq-card ul, .faq-card ol {
+            color: var(--gray);
+            padding-left: 1.2rem;
+        }
+
+        .faq-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-card code {
+            font-size:0.7rem;
+            word-break: break-all;
+        }
+
+        .liquidity-note {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(0,255,136,0.1);
+            border-radius: 5px;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .math-note {
+            margin-top: 1.5rem;
+            background: rgba(138,43,226,0.1);
+            padding: 1rem;
+            border-radius: 5px;
+            color: var(--primary);
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .info-box {
+            background: var(--darker);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .info-box i {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .info-box p {
+            color: var(--gray);
+            margin-top: 0.5rem;
+        }
+
+        .info-box code {
+            font-size:0.8rem;
+            color: var(--gray);
+        }
+
         /* About Section */
         .about {
             padding: 100px 0;
@@ -759,7 +847,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="https://raw.githubusercontent.com/josat123/BRVBTC/main/assets/images/brvbtc.png">
+                    <img src="https://raw.githubusercontent.com/josat123/BRVBTC/main/assets/images/brvbtc.png" alt="BRVBTC Logo">
                     <span class="logo-text">BRVBTC</span>
                 </div>
                 <ul class="nav-links">
@@ -784,7 +872,6 @@
                             <div class="lang-option" data-lang="es">Español</div>
                         </div>
                     </div>
-                    <button class="btn-connect" id="connectWallet" data-translate="connect">Connect Wallet</button>
                 </div>
             </nav>
         </div>
@@ -971,122 +1058,116 @@
     </section>
 
     <!-- Buy FAQ Section -->
-<section class="buy-faq" id="buy-faq" style="padding: 100px 0; background: var(--surface);">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-translate="faq-title">💡 How to Buy BRVBTC</h2>
-            <p class="section-subtitle" data-translate="faq-subtitle">Two ways to get BRVBTC – choose what suits you best</p>
-        </div>
+    <section class="buy-faq" id="buy-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-translate="faq-title">💡 How to Buy BRVBTC</h2>
+                <p class="section-subtitle" data-translate="faq-subtitle">Two ways to get BRVBTC – choose what suits you best</p>
+            </div>
 
-        <div class="faq-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-            
-            <!-- Method 1: Uniswap (Simple) -->
-            <div class="faq-card" style="background: var(--darker); padding: 2rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
-                <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary); text-align: center;">
-                    <i class="fas fa-arrows-alt-h"></i>
-                </div>
-                <h3 style="font-size: 1.8rem; margin-bottom: 1rem; text-align: center; color: var(--secondary);" data-translate="faq-method1-title">🔁 Option 1: Buy on Uniswap (Easiest)</h3>
-                <p style="color: var(--gray); margin-bottom: 1.5rem;" data-translate="faq-method1-desc">
-                    If you already have USDC, WBTC, or ETH, you can swap directly on Uniswap V4.
-                </p>
-                
-                <h4 style="color: var(--light); margin: 1.5rem 0 0.5rem;" data-translate="faq-l1-title">🌐 On Ethereum L1:</h4>
-                <ul style="list-style: none; padding: 0; color: var(--gray);">
-                    <li style="margin-bottom: 0.5rem;">✅ <span data-translate="faq-l1-step1">Go to</span> <a href="https://app.uniswap.org/swap?chain=mainnet" target="_blank" style="color: var(--secondary);">Uniswap App</a></li>
-                    <li style="margin-bottom: 0.5rem;">✅ <span data-translate="faq-l1-step2">Select network:</span> <strong>Ethereum</strong></li>
-                    <li style="margin-bottom: 0.5rem;">✅ <span data-translate="faq-l1-step3">Input token:</span> <strong>USDC</strong> or <strong>WBTC</strong></li>
-                    <li style="margin-bottom: 0.5rem;">✅ <span data-translate="faq-l1-step4">Output token:</span> <strong>BRVBTC</strong></li>
-                    <li style="margin-bottom: 0.5rem;">✅ <span data-translate="faq-l1-step5">Contract address:</span><br><code style="font-size:0.7rem;">0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d</code></li>
-                </ul>
+            <div class="faq-grid">
+                <!-- Method 1: Uniswap (Simple) -->
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-arrows-alt-h"></i>
+                    </div>
+                    <h3 data-translate="faq-method1-title">🔁 Option 1: Buy on Uniswap (Easiest)</h3>
+                    <p data-translate="faq-method1-desc">
+                        If you already have USDC, WBTC, or ETH, you can swap directly on Uniswap V4.
+                    </p>
+                    
+                    <h4 data-translate="faq-l1-title">🌐 On Ethereum L1:</h4>
+                    <ul>
+                        <li>✅ <span data-translate="faq-l1-step1">Go to</span> <a href="https://app.uniswap.org/swap?chain=mainnet" target="_blank" style="color: var(--secondary);">Uniswap App</a></li>
+                        <li>✅ <span data-translate="faq-l1-step2">Select network:</span> <strong>Ethereum</strong></li>
+                        <li>✅ <span data-translate="faq-l1-step3">Input token:</span> <strong>USDC</strong> or <strong>WBTC</strong></li>
+                        <li>✅ <span data-translate="faq-l1-step4">Output token:</span> <strong>BRVBTC</strong></li>
+                        <li>✅ <span data-translate="faq-l1-step5">Contract address:</span><br><code>0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d</code></li>
+                    </ul>
 
-                <h4 style="color: var(--light); margin: 1.5rem 0 0.5rem;" data-translate="faq-l2-title">⛓️ On Polygon L2 (cheaper fees):</h4>
-                <ul style="list-style: none; padding: 0; color: var(--gray);">
-                    <li style="margin-bottom: 0.5rem;">✅ <span data-translate="faq-l2-step1">Switch network to</span> <strong>Polygon</strong></li>
-                    <li style="margin-bottom: 0.5rem;">✅ <span data-translate="faq-l2-step2">Go to</span> <a href="https://app.uniswap.org/swap?chain=polygon" target="_blank" style="color: var(--secondary);">Uniswap on Polygon</a></li>
-                    <li style="margin-bottom: 0.5rem;">✅ <span data-translate="faq-l2-step3">Swap</span> <strong>USDC</strong> or <strong>posWBTC</strong> → <strong>BRVBTC</strong></li>
-                    <li style="margin-bottom: 0.5rem;">✅ <span data-translate="faq-l2-step4">Contract address:</span><br><code style="font-size:0.7rem;">0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB</code></li>
-                </ul>
+                    <h4 data-translate="faq-l2-title">⛓️ On Polygon L2 (cheaper fees):</h4>
+                    <ul>
+                        <li>✅ <span data-translate="faq-l2-step1">Switch network to</span> <strong>Polygon</strong></li>
+                        <li>✅ <span data-translate="faq-l2-step2">Go to</span> <a href="https://app.uniswap.org/swap?chain=polygon" target="_blank" style="color: var(--secondary);">Uniswap on Polygon</a></li>
+                        <li>✅ <span data-translate="faq-l2-step3">Swap</span> <strong>USDC</strong> or <strong>posWBTC</strong> → <strong>BRVBTC</strong></li>
+                        <li>✅ <span data-translate="faq-l2-step4">Contract address:</span><br><code>0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB</code></li>
+                    </ul>
 
-                <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(0,255,136,0.1); border-radius: 5px;">
-                    <p style="color: var(--secondary); font-weight: 600;" data-translate="faq-liquidity-note">
+                    <div class="liquidity-note" data-translate="faq-liquidity-note">
                         💧 Pool liquidity: $105 on L1 • $100 on L2
+                    </div>
+                </div>
+
+                <!-- Method 2: Mint with WBTC (Advanced) -->
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3 data-translate="faq-method2-title">⚙️ Option 2: Mint with WBTC (Direct)</h3>
+                    <p data-translate="faq-method2-desc">
+                        If you hold WBTC (or posWBTC), you can mint BRVBTC directly from the contract at the mathematical rate: <strong>1 WBTC = 100,000 BRVBTC = $100,000</strong>.
+                    </p>
+
+                    <h4 data-translate="faq-mint-l1">📦 Mint on Ethereum L1:</h4>
+                    <ol>
+                        <li data-translate="faq-mint-l1-step1">Get WBTC (Wrapped Bitcoin)</li>
+                        <li data-translate="faq-mint-l1-step2">Go to contract on <a href="https://etherscan.io/address/0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d#writeContract" target="_blank" style="color: var(--secondary);">Etherscan</a></li>
+                        <li data-translate="faq-mint-l1-step3">Connect wallet (Write Contract tab)</li>
+                        <li data-translate="faq-mint-l1-step4">First call <code>approve</code> to allow contract to spend your WBTC</li>
+                        <li data-translate="faq-mint-l1-step5">Then call <code>mint(wbtcAmount)</code></li>
+                    </ol>
+
+                    <h4 data-translate="faq-mint-l2">⛓️ Mint on Polygon L2:</h4>
+                    <ol>
+                        <li data-translate="faq-mint-l2-step1">Get posWBTC (bridged WBTC on Polygon)</li>
+                        <li data-translate="faq-mint-l2-step2">Go to contract on <a href="https://polygonscan.com/address/0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB#writeContract" target="_blank" style="color: var(--secondary);">Polygonscan</a></li>
+                        <li data-translate="faq-mint-l2-step3">Same process: approve → mint</li>
+                    </ol>
+
+                    <div class="math-note">
+                        <p style="color: var(--primary);" data-translate="faq-mint-note">
+                            📐 <strong>Math:</strong> 1 WBTC = 100,000 BRVBTC → 1 BRVBTC = 1 USD
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info Row -->
+            <div class="info-row">
+                <div class="info-box">
+                    <i class="fas fa-exchange-alt"></i>
+                    <strong data-translate="faq-bridge-title">🌉 Need to move between chains?</strong>
+                    <p data-translate="faq-bridge-desc">Use the <strong>Universal Bridge</strong>:</p>
+                    <p><code>L1: 0xe8681d55585FcDA6a4a39c9a59f39b63fbBa88e8</code></p>
+                    <p><code>L2: 0x0Ef6a63a16fB21dD8398183a154596953Ce4E835</code></p>
+                    <p style="color: var(--secondary); margin-top: 0.5rem;" data-translate="faq-bridge-fee">Fee: 0.05% • ~5 min</p>
+                </div>
+
+                <div class="info-box">
+                    <i class="fas fa-fire"></i>
+                    <strong data-translate="faq-burn-title">🔥 Want to redeem WBTC?</strong>
+                    <p data-translate="faq-burn-desc">
+                        Call <code>burnToWBTC(amount)</code> on the contract. You'll receive WBTC back (subject to reserve).
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <i class="fas fa-shield-alt"></i>
+                    <strong data-translate="faq-verify-title">🔍 Verify everything</strong>
+                    <p data-translate="faq-verify-desc">
+                        Reserve: <code>totalReserve()</code> • Supply: <code>totalSupply()</code> • Events on Etherscan/Polygonscan
                     </p>
                 </div>
             </div>
 
-            <!-- Method 2: Mint with WBTC (Advanced) -->
-            <div class="faq-card" style="background: var(--darker); padding: 2rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
-                <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary); text-align: center;">
-                    <i class="fas fa-cubes"></i>
-                </div>
-                <h3 style="font-size: 1.8rem; margin-bottom: 1rem; text-align: center; color: var(--secondary);" data-translate="faq-method2-title">⚙️ Option 2: Mint with WBTC (Direct)</h3>
-                <p style="color: var(--gray); margin-bottom: 1.5rem;" data-translate="faq-method2-desc">
-                    If you hold WBTC (or posWBTC), you can mint BRVBTC directly from the contract at the mathematical rate: <strong>1 WBTC = 100,000 BRVBTC = $100,000</strong>.
-                </p>
-
-                <h4 style="color: var(--light); margin: 1.5rem 0 0.5rem;" data-translate="faq-mint-l1">📦 Mint on Ethereum L1:</h4>
-                <ol style="color: var(--gray); padding-left: 1.2rem;">
-                    <li style="margin-bottom: 0.5rem;" data-translate="faq-mint-l1-step1">Get WBTC (Wrapped Bitcoin)</li>
-                    <li style="margin-bottom: 0.5rem;" data-translate="faq-mint-l1-step2">Go to contract on <a href="https://etherscan.io/address/0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d#writeContract" target="_blank" style="color: var(--secondary);">Etherscan</a></li>
-                    <li style="margin-bottom: 0.5rem;" data-translate="faq-mint-l1-step3">Connect wallet (Write Contract tab)</li>
-                    <li style="margin-bottom: 0.5rem;" data-translate="faq-mint-l1-step4">First call <code>approve</code> to allow contract to spend your WBTC</li>
-                    <li style="margin-bottom: 0.5rem;" data-translate="faq-mint-l1-step5">Then call <code>mint(wbtcAmount)</code></li>
-                </ol>
-
-                <h4 style="color: var(--light); margin: 1.5rem 0 0.5rem;" data-translate="faq-mint-l2">⛓️ Mint on Polygon L2:</h4>
-                <ol style="color: var(--gray); padding-left: 1.2rem;">
-                    <li style="margin-bottom: 0.5rem;" data-translate="faq-mint-l2-step1">Get posWBTC (bridged WBTC on Polygon)</li>
-                    <li style="margin-bottom: 0.5rem;" data-translate="faq-mint-l2-step2">Go to contract on <a href="https://polygonscan.com/address/0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB#writeContract" target="_blank" style="color: var(--secondary);">Polygonscan</a></li>
-                    <li style="margin-bottom: 0.5rem;" data-translate="faq-mint-l2-step3">Same process: approve → mint</li>
-                </ol>
-
-                <div style="margin-top: 1.5rem; background: rgba(138,43,226,0.1); padding: 1rem; border-radius: 5px;">
-                    <p style="color: var(--primary);" data-translate="faq-mint-note">
-                        📐 <strong>Math:</strong> 1 WBTC = 100,000 BRVBTC → 1 BRVBTC = 1 USD
-                    </p>
-                </div>
+            <!-- CTA -->
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="https://github.com/josat123/BRVBTC" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-github"></i> <span data-translate="faq-github">View Full Docs on GitHub</span>
+                </a>
             </div>
         </div>
-
-        <!-- Additional Info Row -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-            
-            <div style="background: var(--darker); padding: 1.5rem; border-radius: 10px;">
-                <i class="fas fa-exchange-alt" style="color: var(--secondary); font-size: 1.5rem; margin-right: 0.5rem;"></i>
-                <strong data-translate="faq-bridge-title">🌉 Need to move between chains?</strong>
-                <p style="color: var(--gray); margin-top: 0.5rem;" data-translate="faq-bridge-desc">
-                    Use the <strong>Universal Bridge</strong>:
-                </p>
-                <p style="font-size:0.8rem; color: var(--gray);">L1: <code>0xe8681d55585FcDA6a4a39c9a59f39b63fbBa88e8</code></p>
-                <p style="font-size:0.8rem; color: var(--gray);">L2: <code>0x0Ef6a63a16fB21dD8398183a154596953Ce4E835</code></p>
-                <p style="color: var(--secondary); margin-top: 0.5rem;" data-translate="faq-bridge-fee">Fee: 0.05% • ~5 min</p>
-            </div>
-
-            <div style="background: var(--darker); padding: 1.5rem; border-radius: 10px;">
-                <i class="fas fa-fire" style="color: var(--secondary); font-size: 1.5rem; margin-right: 0.5rem;"></i>
-                <strong data-translate="faq-burn-title">🔥 Want to redeem WBTC?</strong>
-                <p style="color: var(--gray); margin-top: 0.5rem;" data-translate="faq-burn-desc">
-                    Call <code>burnToWBTC(amount)</code> on the contract. You'll receive WBTC back (subject to reserve).
-                </p>
-            </div>
-
-            <div style="background: var(--darker); padding: 1.5rem; border-radius: 10px;">
-                <i class="fas fa-shield-alt" style="color: var(--secondary); font-size: 1.5rem; margin-right: 0.5rem;"></i>
-                <strong data-translate="faq-verify-title">🔍 Verify everything</strong>
-                <p style="color: var(--gray); margin-top: 0.5rem;" data-translate="faq-verify-desc">
-                    Reserve: <code>totalReserve()</code> • Supply: <code>totalSupply()</code> • Events on Etherscan/Polygonscan
-                </p>
-            </div>
-        </div>
-
-        <!-- CTA -->
-        <div style="text-align: center; margin-top: 4rem;">
-            <a href="https://github.com/josat123/BRVBTC" class="btn btn-primary" target="_blank">
-                <i class="fab fa-github"></i> <span data-translate="faq-github">View Full Docs on GitHub</span>
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Ecosystem Section -->
     <section class="ecosystem" id="ecosystem">
@@ -1219,7 +1300,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="https://raw.githubusercontent.com/josat123/BRVBTC/main/assets/images/brvbtc.png" style="height: 30px;">
+                        <img src="https://raw.githubusercontent.com/josat123/BRVBTC/main/assets/images/brvbtc.png" alt="BRVBTC Logo" style="height: 30px;">
                         <span class="logo-text">BRVBTC</span>
                     </div>
                     <p class="footer-description" data-translate="footer-desc">
@@ -1288,7 +1369,6 @@
                 'nav-bridge': 'Bridge',
                 'nav-ecosystem': 'Ecosystem',
                 'theme': 'Theme',
-                'connect': 'Connect Wallet',
                 'hero-badge': 'Bitcoin-Backed Stable Token | 50% On-Chain WBTC Reserve',
                 'hero-title': '1 BRVBTC = 1 USD — Mathematically Guaranteed',
                 'hero-description': 'BRVBTC is a hybrid stable token pegged to 1 USD, backed by 50% on-chain WBTC reserve. Mint with real WBTC, burn to redeem WBTC. Native on Ethereum & Polygon.',
@@ -1354,7 +1434,44 @@
                 'ecosystem-footer': 'Ecosystem',
                 'contact': 'Contact',
                 'website': 'Website',
-                'all-rights': 'All rights reserved. | 1 BRVBTC = 1 USD (by construction)'
+                'all-rights': 'All rights reserved. | 1 BRVBTC = 1 USD (by construction)',
+                'faq-title': '💡 How to Buy BRVBTC',
+                'faq-subtitle': 'Two ways to get BRVBTC – choose what suits you best',
+                'faq-method1-title': '🔁 Option 1: Buy on Uniswap (Easiest)',
+                'faq-method1-desc': 'If you already have USDC, WBTC, or ETH, you can swap directly on Uniswap V4.',
+                'faq-l1-title': '🌐 On Ethereum L1:',
+                'faq-l1-step1': 'Go to',
+                'faq-l1-step2': 'Select network:',
+                'faq-l1-step3': 'Input token:',
+                'faq-l1-step4': 'Output token:',
+                'faq-l1-step5': 'Contract address:',
+                'faq-l2-title': '⛓️ On Polygon L2 (cheaper fees):',
+                'faq-l2-step1': 'Switch network to',
+                'faq-l2-step2': 'Go to',
+                'faq-l2-step3': 'Swap',
+                'faq-l2-step4': 'Contract address:',
+                'faq-liquidity-note': '💧 Pool liquidity: $105 on L1 • $100 on L2',
+                'faq-method2-title': '⚙️ Option 2: Mint with WBTC (Direct)',
+                'faq-method2-desc': 'If you hold WBTC (or posWBTC), you can mint BRVBTC directly from the contract at the mathematical rate: 1 WBTC = 100,000 BRVBTC = $100,000.',
+                'faq-mint-l1': '📦 Mint on Ethereum L1:',
+                'faq-mint-l1-step1': 'Get WBTC (Wrapped Bitcoin)',
+                'faq-mint-l1-step2': 'Go to contract on',
+                'faq-mint-l1-step3': 'Connect wallet (Write Contract tab)',
+                'faq-mint-l1-step4': 'First call approve to allow contract to spend your WBTC',
+                'faq-mint-l1-step5': 'Then call mint(wbtcAmount)',
+                'faq-mint-l2': '⛓️ Mint on Polygon L2:',
+                'faq-mint-l2-step1': 'Get posWBTC (bridged WBTC on Polygon)',
+                'faq-mint-l2-step2': 'Go to contract on',
+                'faq-mint-l2-step3': 'Same process: approve → mint',
+                'faq-mint-note': '📐 Math: 1 WBTC = 100,000 BRVBTC → 1 BRVBTC = 1 USD',
+                'faq-bridge-title': '🌉 Need to move between chains?',
+                'faq-bridge-desc': 'Use the Universal Bridge:',
+                'faq-bridge-fee': 'Fee: 0.05% • ~5 min',
+                'faq-burn-title': '🔥 Want to redeem WBTC?',
+                'faq-burn-desc': 'Call burnToWBTC(amount) on the contract. You\'ll receive WBTC back (subject to reserve).',
+                'faq-verify-title': '🔍 Verify everything',
+                'faq-verify-desc': 'Reserve: totalReserve() • Supply: totalSupply() • Events on Etherscan/Polygonscan',
+                'faq-github': 'View Full Docs on GitHub'
             },
             it: {
                 'nav-home': 'Home',
@@ -1363,7 +1480,6 @@
                 'nav-bridge': 'Bridge',
                 'nav-ecosystem': 'Ecosistema',
                 'theme': 'Tema',
-                'connect': 'Connetti Wallet',
                 'hero-badge': 'Stablecoin Garantita da Bitcoin | 50% Riserva WBTC On-Chain',
                 'hero-title': '1 BRVBTC = 1 USD — Garantito Matematicamente',
                 'hero-description': 'BRVBTC è uno stablecoin ibrido ancorato a 1 USD, garantito da una riserva on-chain del 50% in WBTC. Conia con WBTC reale, brucia per riavere WBTC. Nativo su Ethereum e Polygon.',
@@ -1429,7 +1545,44 @@
                 'ecosystem-footer': 'Ecosistema',
                 'contact': 'Contatti',
                 'website': 'Sito Web',
-                'all-rights': 'Tutti i diritti riservati. | 1 BRVBTC = 1 USD (per costruzione)'
+                'all-rights': 'Tutti i diritti riservati. | 1 BRVBTC = 1 USD (per costruzione)',
+                'faq-title': '💡 Come Comprare BRVBTC',
+                'faq-subtitle': 'Due modi per ottenere BRVBTC – scegli quello che preferisci',
+                'faq-method1-title': '🔁 Opzione 1: Compra su Uniswap (Il più semplice)',
+                'faq-method1-desc': 'Se hai già USDC, WBTC o ETH, puoi fare swap direttamente su Uniswap V4.',
+                'faq-l1-title': '🌐 Su Ethereum L1:',
+                'faq-l1-step1': 'Vai su',
+                'faq-l1-step2': 'Seleziona rete:',
+                'faq-l1-step3': 'Token di input:',
+                'faq-l1-step4': 'Token di output:',
+                'faq-l1-step5': 'Indirizzo contratto:',
+                'faq-l2-title': '⛓️ Su Polygon L2 (commissioni più basse):',
+                'faq-l2-step1': 'Cambia rete in',
+                'faq-l2-step2': 'Vai su',
+                'faq-l2-step3': 'Swap',
+                'faq-l2-step4': 'Indirizzo contratto:',
+                'faq-liquidity-note': '💧 Liquidità pool: $105 su L1 • $100 su L2',
+                'faq-method2-title': '⚙️ Opzione 2: Conia con WBTC (Diretto)',
+                'faq-method2-desc': 'Se hai WBTC (o posWBTC), puoi coniare BRVBTC direttamente dal contratto al tasso matematico: 1 WBTC = 100.000 BRVBTC = $100.000.',
+                'faq-mint-l1': '📦 Conia su Ethereum L1:',
+                'faq-mint-l1-step1': 'Ottieni WBTC (Wrapped Bitcoin)',
+                'faq-mint-l1-step2': 'Vai al contratto su',
+                'faq-mint-l1-step3': 'Connetti wallet (scheda Write Contract)',
+                'faq-mint-l1-step4': 'Prima chiama approve per permettere al contratto di spendere i tuoi WBTC',
+                'faq-mint-l1-step5': 'Poi chiama mint(wbtcAmount)',
+                'faq-mint-l2': '⛓️ Conia su Polygon L2:',
+                'faq-mint-l2-step1': 'Ottieni posWBTC (WBTC bridge su Polygon)',
+                'faq-mint-l2-step2': 'Vai al contratto su',
+                'faq-mint-l2-step3': 'Stesso procedimento: approve → mint',
+                'faq-mint-note': '📐 Matematica: 1 WBTC = 100.000 BRVBTC → 1 BRVBTC = 1 USD',
+                'faq-bridge-title': '🌉 Vuoi spostarti tra le chain?',
+                'faq-bridge-desc': 'Usa il Universal Bridge:',
+                'faq-bridge-fee': 'Commissione: 0.05% • ~5 min',
+                'faq-burn-title': '🔥 Vuoi riavere WBTC?',
+                'faq-burn-desc': 'Chiama burnToWBTC(amount) sul contratto. Riceverai WBTC indietro (soggetto a riserva).',
+                'faq-verify-title': '🔍 Verifica tutto',
+                'faq-verify-desc': 'Riserva: totalReserve() • Fornitura: totalSupply() • Eventi su Etherscan/Polygonscan',
+                'faq-github': 'Leggi la documentazione su GitHub'
             },
             es: {
                 'nav-home': 'Inicio',
@@ -1438,7 +1591,6 @@
                 'nav-bridge': 'Puente',
                 'nav-ecosystem': 'Ecosistema',
                 'theme': 'Tema',
-                'connect': 'Conectar Wallet',
                 'hero-badge': 'Stablecoin Respaldada por Bitcoin | 50% Reserva WBTC On-Chain',
                 'hero-title': '1 BRVBTC = 1 USD — Garantizado Matemáticamente',
                 'hero-description': 'BRVBTC es un stablecoin híbrido vinculado a 1 USD, respaldado por una reserva on-chain del 50% en WBTC. Acuña con WBTC real, quema para recuperar WBTC. Nativo en Ethereum y Polygon.',
@@ -1475,43 +1627,6 @@
                 'bridge-fee': 'Comisión',
                 'avg-time': 'Tiempo Promedio',
                 'bridge-addresses': 'Direcciones del Puente:',
-                'faq-title': '💡 How to Buy BRVBTC',
-                'faq-subtitle': 'Two ways to get BRVBTC – choose what suits you best',
-                'faq-method1-title': '🔁 Option 1: Buy on Uniswap (Easiest)',
-                'faq-method1-desc': 'If you already have USDC, WBTC, or ETH, you can swap directly on Uniswap V4.',
-                'faq-l1-title': '🌐 On Ethereum L1:',
-                'faq-l1-step1': 'Go to',
-                'faq-l1-step2': 'Select network:',
-                'faq-l1-step3': 'Input token:',
-                'faq-l1-step4': 'Output token:',
-                'faq-l1-step5': 'Contract address:',
-                'faq-l2-title': '⛓️ On Polygon L2 (cheaper fees):',
-                'faq-l2-step1': 'Switch network to',
-                'faq-l2-step2': 'Go to',
-                'faq-l2-step3': 'Swap',
-                'faq-l2-step4': 'Contract address:',
-                'faq-liquidity-note': '💧 Pool liquidity: $105 on L1 • $100 on L2',
-                'faq-method2-title': '⚙️ Option 2: Mint with WBTC (Direct)',
-                'faq-method2-desc': 'If you hold WBTC (or posWBTC), you can mint BRVBTC directly from the contract at the mathematical rate: 1 WBTC = 100,000 BRVBTC = $100,000.',
-                'faq-mint-l1': '📦 Mint on Ethereum L1:',
-                'faq-mint-l1-step1': 'Get WBTC (Wrapped Bitcoin)',
-                'faq-mint-l1-step2': 'Go to contract on',
-                'faq-mint-l1-step3': 'Connect wallet (Write Contract tab)',
-                'faq-mint-l1-step4': 'First call approve to allow contract to spend your WBTC',
-                'faq-mint-l1-step5': 'Then call mint(wbtcAmount)',
-                'faq-mint-l2': '⛓️ Mint on Polygon L2:',
-                'faq-mint-l2-step1': 'Get posWBTC (bridged WBTC on Polygon)',
-                'faq-mint-l2-step2': 'Go to contract on',
-                'faq-mint-l2-step3': 'Same process: approve → mint',
-                'faq-mint-note': '📐 Math: 1 WBTC = 100,000 BRVBTC → 1 BRVBTC = 1 USD',
-                'faq-bridge-title': '🌉 Need to move between chains?',
-                'faq-bridge-desc': 'Use the Universal Bridge:',
-                'faq-bridge-fee': 'Fee: 0.05% • ~5 min',
-                'faq-burn-title': '🔥 Want to redeem WBTC?',
-                'faq-burn-desc': 'Call burnToWBTC(amount) on the contract. You\'ll receive WBTC back (subject to reserve).',
-                'faq-verify-title': '🔍 Verify everything',
-                'faq-verify-desc': 'Reserve: totalReserve() • Supply: totalSupply() • Events on Etherscan/Polygonscan',
-                'faq-github': 'View Full Docs on GitHub'
                 'ecosystem-title': 'Liquidez y Ecosistema',
                 'ecosystem-subtitle': 'Pools activos en Ethereum y Polygon',
                 'pool-l1': 'Uniswap V4 L1',
@@ -1541,7 +1656,44 @@
                 'ecosystem-footer': 'Ecosistema',
                 'contact': 'Contacto',
                 'website': 'Sitio Web',
-                'all-rights': 'Todos los derechos reservados. | 1 BRVBTC = 1 USD (por construcción)'
+                'all-rights': 'Todos los derechos reservados. | 1 BRVBTC = 1 USD (por construcción)',
+                'faq-title': '💡 Cómo Comprar BRVBTC',
+                'faq-subtitle': 'Dos formas de obtener BRVBTC – elige la que mejor se adapte',
+                'faq-method1-title': '🔁 Opción 1: Compra en Uniswap (La más fácil)',
+                'faq-method1-desc': 'Si ya tienes USDC, WBTC o ETH, puedes intercambiar directamente en Uniswap V4.',
+                'faq-l1-title': '🌐 En Ethereum L1:',
+                'faq-l1-step1': 'Ve a',
+                'faq-l1-step2': 'Selecciona red:',
+                'faq-l1-step3': 'Token de entrada:',
+                'faq-l1-step4': 'Token de salida:',
+                'faq-l1-step5': 'Dirección del contrato:',
+                'faq-l2-title': '⛓️ En Polygon L2 (comisiones más bajas):',
+                'faq-l2-step1': 'Cambia la red a',
+                'faq-l2-step2': 'Ve a',
+                'faq-l2-step3': 'Intercambia',
+                'faq-l2-step4': 'Dirección del contrato:',
+                'faq-liquidity-note': '💧 Liquidez del pool: $105 en L1 • $100 en L2',
+                'faq-method2-title': '⚙️ Opción 2: Acuña con WBTC (Directo)',
+                'faq-method2-desc': 'Si tienes WBTC (o posWBTC), puedes acuñar BRVBTC directamente desde el contrato a la tasa matemática: 1 WBTC = 100,000 BRVBTC = $100,000.',
+                'faq-mint-l1': '📦 Acuña en Ethereum L1:',
+                'faq-mint-l1-step1': 'Obtén WBTC (Wrapped Bitcoin)',
+                'faq-mint-l1-step2': 'Ve al contrato en',
+                'faq-mint-l1-step3': 'Conecta tu wallet (pestaña Write Contract)',
+                'faq-mint-l1-step4': 'Primero llama approve para permitir que el contrato gaste tus WBTC',
+                'faq-mint-l1-step5': 'Luego llama mint(wbtcAmount)',
+                'faq-mint-l2': '⛓️ Acuña en Polygon L2:',
+                'faq-mint-l2-step1': 'Obtén posWBTC (WBTC puenteado en Polygon)',
+                'faq-mint-l2-step2': 'Ve al contrato en',
+                'faq-mint-l2-step3': 'Mismo proceso: approve → mint',
+                'faq-mint-note': '📐 Matemáticas: 1 WBTC = 100,000 BRVBTC → 1 BRVBTC = 1 USD',
+                'faq-bridge-title': '🌉 ¿Necesitas moverte entre cadenas?',
+                'faq-bridge-desc': 'Usa el Universal Bridge:',
+                'faq-bridge-fee': 'Comisión: 0.05% • ~5 min',
+                'faq-burn-title': '🔥 ¿Quieres recuperar WBTC?',
+                'faq-burn-desc': 'Llama burnToWBTC(amount) en el contrato. Recibirás WBTC de vuelta (sujeto a reserva).',
+                'faq-verify-title': '🔍 Verifica todo',
+                'faq-verify-desc': 'Reserva: totalReserve() • Suministro: totalSupply() • Eventos en Etherscan/Polygonscan',
+                'faq-github': 'Ver documentación en GitHub'
             }
         };
 
@@ -1569,12 +1721,6 @@
                 const lang = this.getAttribute('data-lang');
                 setLanguage(lang);
             });
-        });
-
-        // Wallet connection simulation
-        const connectBtn = document.getElementById('connectWallet');
-        connectBtn.addEventListener('click', function() {
-            alert('Wallet connection feature coming soon. In the meantime, you can interact directly with the contracts on Etherscan/Polygonscan.');
         });
 
         // Smooth scrolling for navigation links
