@@ -11,9 +11,19 @@
       "symbol": "BRVBTC",
       "decimals": 18,
       "logoURI": "https://dwjcrypto.com/eth/F1b.svg"
+    },
+    {
+      "chainId": 137,
+      "address": "0xYOUR_POLYGON_CONTRACT_HERE",
+      "name": "Bolivar Republic Venezuela BTC",
+      "symbol": "BRVBTC",
+      "decimals": 18,
+      "logoURI": "https://dwjcrypto.com/eth/F1b.svg"
     }
   ],
   "version": {
     "major": 1,
     "minor": 0,
-    "patch": 0
+    "patch": 1
+  }
+}
