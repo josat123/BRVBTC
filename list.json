@@ -1,0 +1,19 @@
+{
+  "name": "BRVBTC Token List",
+  "logoURI": "https://dwjcrypto.com/eth/F1b.svg",
+  "keywords": ["defi", "token"],
+  "timestamp": "2026-04-18T00:00:00+00:00",
+  "tokens": [
+    {
+      "chainId": 1,
+      "address": "0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d",
+      "name": "Bolivar Republic Venezuela BTC",
+      "symbol": "BRVBTC",
+      "decimals": 18,
+      "logoURI": "https://dwjcrypto.com/eth/F1b.svg"
+    }
+  ],
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
