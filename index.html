@@ -304,6 +304,20 @@
             transform: scale(1.01);
         }
 
+        .banner-section {
+            max-width: 600px; /* Larghezza massima desiderata */
+            width: 100%;      /* Occupa tutta la larghezza fino a 600px */
+            margin: 20px auto; /* Centra e aggiunge spazio sopra/sotto */
+            padding: 10px;    /* Spazio interno per non far "respirare" l'immagine */
+            background: transparent; /* Rimuove lo sfondo se non serve */
+        }
+
+        .banner-section img {
+            width: 100%;    /* L'immagine si adatta alla larghezza del contenitore */
+            height: auto;   /* Mantiene le proporzioni */
+            display: block; /* Rimuove eventuali spazi bianchi sotto l'immagine */
+        }
+
         .features, .tokenomics, .bridge, .ecosystem, .team, .buy-faq, .about, .social-proof, .cta, .gecko-links {
             padding: 100px 0;
         }
