@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRVBTC – Bitcoin-Backed Stable Token | 50% On-Chain WBTC Reserve</title>
     <meta name="description" content="BRVBTC: A revolutionary stable token pegged to 1 USD, backed by 50% on-chain WBTC reserve. Native on Ethereum & Polygon. Mint with WBTC, burn for WBTC.">
-    <!-- Favicon - SVG + fallback PNG -->
+    <!-- Favicon - SVG + fallback PNG (caricati dalla repo GitHub) -->
     <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/josat123/BRVBTC/main/favicon.svg">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/josat123/BRVBTC/main/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,8 +26,8 @@
             --light: #1a1a1a;
             --gray: #555555;
             --surface: #e8e8e8;
-            --primary: #6a1cb0;      /* viola più scuro per contrasto */
-            --secondary: #008844;     /* verde scuro leggibile su sfondo chiaro */
+            --primary: #6a1cb0;
+            --secondary: #008844;
         }
 
         * {
@@ -298,6 +298,10 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
+        }
+
+        .banner-container img:hover {
+            transform: scale(1.01);
         }
 
         .features, .tokenomics, .bridge, .ecosystem, .team, .buy-faq, .about, .social-proof, .cta, .gecko-links {
@@ -661,9 +665,10 @@
         </div>
     </section>
 
+    <!-- Banner Section - ora punta al tuo dominio ufficiale -->
     <div class="banner-section">
         <div class="banner-container">
-            <img src="https://dwjcrypto.com/ban/banner.png" alt="BRVBTC Promotion Banner" loading="lazy">
+            <img src="https://bolivarrepublicavenezuelabtc.com/banner.png" alt="BRVBTC Promotion Banner" loading="lazy">
         </div>
     </div>
 
@@ -880,7 +885,7 @@
     </footer>
 
     <script>
-        // ======================== TRADUZIONI COMPLETE ========================
+        
         const translations = {
             en: {
                 'nav-home': 'Home', 'nav-features': 'Features', 'nav-tokenomics': 'Tokenomics', 'nav-bridge': 'Bridge', 'nav-ecosystem': 'Ecosystem', 'nav-team': 'Team',
@@ -989,7 +994,6 @@
             }
         };
 
-        // ======================== FUNZIONI DI TRADUZIONE ========================
         function setLanguage(lang) {
             localStorage.setItem('brvbtc_lang', lang);
             document.body.setAttribute('data-lang', lang);
@@ -1006,7 +1010,6 @@
             });
         }
 
-        // ======================== TEMA (SALVA IN LOCALSTORAGE) ========================
         function setTheme(theme) {
             localStorage.setItem('brvbtc_theme', theme);
             document.body.setAttribute('data-theme', theme);
@@ -1014,8 +1017,7 @@
             if (theme === 'dark') icon.className = 'fas fa-moon';
             else icon.className = 'fas fa-sun';
         }
-
-        // ======================== SMOOTH SCROLL ========================
+        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
@@ -1027,8 +1029,7 @@
                 }
             });
         });
-
-        // ======================== INIZIALIZZAZIONE ========================
+        
         const savedLang = localStorage.getItem('brvbtc_lang') || 'en';
         const savedTheme = localStorage.getItem('brvbtc_theme') || 'dark';
         setLanguage(savedLang);
