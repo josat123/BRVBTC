@@ -1331,10 +1331,23 @@
                     <a href="https://github.com/josat123/universal-bridge" target="_blank">Universal Bridge</a>
                 </div>
                 <div class="footer-links">
-                    <h4 data-translate="contact">Contact</h4>
-                    <a href="mailto:adminbrv@bolivarrepublicavenezuelabtc.com</a>
-                    <a href="https://deflationarybtc.org/" target="_blank" data-translate="website">Website</a>
-                </div>
+    <h4 data-translate="contact">Contact</h4>
+
+    <a href="#" onclick="dwjSendMail()" data-translate="contact_link">
+        Contact
+    </a>
+
+    <a href="https://bolivarrepublicavenezuelabtc.com/" target="_blank" data-translate="website">
+        Website
+    </a>
+</div>
+
+<script>
+function dwjSendMail() {
+    const user = "adminbrv";
+    const domain = "bolivarrepublicavenezuelabtc.com";
+    window.location.href = "mailto:" + user + "@" + domain;
+}
             </div>
             <div class="footer-bottom">
                 <p>© 2026 BRVBTC. <span data-translate="all-rights">All rights reserved. | 1 BRVBTC = 1 USD (by construction)</span></p>
