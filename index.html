@@ -305,17 +305,17 @@
         }
 
         .banner-section {
-            max-width: 600px; /* Larghezza massima desiderata */
-            width: 100%;      /* Occupa tutta la larghezza fino a 600px */
-            margin: 20px auto; /* Centra e aggiunge spazio sopra/sotto */
-            padding: 10px;    /* Spazio interno per non far "respirare" l'immagine */
-            background: transparent; /* Rimuove lo sfondo se non serve */
+            max-width: 600px;
+            width: 100%;
+            margin: 20px auto;
+            padding: 10px;
+            background: transparent;
         }
 
         .banner-section img {
-            width: 100%;    /* L'immagine si adatta alla larghezza del contenitore */
-            height: auto;   /* Mantiene le proporzioni */
-            display: block; /* Rimuove eventuali spazi bianchi sotto l'immagine */
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .features, .tokenomics, .bridge, .ecosystem, .team, .buy-faq, .about, .social-proof, .cta, .gecko-links {
@@ -540,6 +540,41 @@
             color: black;
         }
 
+        /* CORREZIONE CTA - CENTRALE E DISTANZIATA */
+        .cta {
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .cta .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+
+        .cta .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
         footer {
             background: var(--darker);
             padding: 60px 0 30px;
@@ -617,6 +652,8 @@
             .hero-title { font-size: 2.5rem; }
             .tokenomics-details { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
+            .cta-title { font-size: 1.75rem; }
+            .cta-description { font-size: 1rem; }
         }
 
         code {
@@ -679,11 +716,33 @@
         </div>
     </section>
 
-    <!-- Banner Section - ora punta al tuo dominio ufficiale -->
+    <!-- Banner Section -->
     <div class="banner-section">
         <div class="banner-container">
             <img src="https://bolivarrepublicavenezuelabtc.com/banner.png" alt="BRVBTC Promotion Banner" loading="lazy">
         </div>
+    </div>
+                           
+    <!-- STAKING BANNER - Earn WBTC Rewards -->
+    <div style="display: flex; justify-content: center; margin: 40px auto 20px;">
+        <a href="https://brvbtc.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block; max-width: 550px; width: 90%;">
+            <div style="background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 100%); border-radius: 60px; border: 1px solid rgba(138, 43, 226, 0.4); padding: 0.8rem 1.2rem 0.8rem 0.8rem; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); display: flex; align-items: center; justify-content: space-between; gap: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='#00FF88'; this.style.boxShadow='0 8px 20px rgba(138,43,226,0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(138,43,226,0.4)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)';">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="background: linear-gradient(135deg, rgba(138,43,226,0.2), rgba(0,255,136,0.1)); border-radius: 50%; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-chart-line" style="font-size: 24px; color: #00FF88;"></i>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.7rem; color: #00FF88; font-weight: 600; letter-spacing: 0.5px;">🔥 EARN WBTC REWARDS</div>
+                        <div style="font-weight: 700; font-size: 1rem; color: white; margin-top: 2px;">Stake BRVBTC</div>
+                        <div style="font-size: 0.65rem; color: #888;">Dynamic APY 5-8% • Lock boost available</div>
+                    </div>
+                </div>
+                <div style="background: linear-gradient(135deg, #8A2BE2, #00FF88); border-radius: 40px; padding: 8px 18px; font-weight: 600; font-size: 0.8rem; color: #0a0a0a; display: flex; align-items: center; gap: 8px; white-space: nowrap;">
+                    <span>Start Staking</span>
+                    <i class="fas fa-arrow-right" style="font-size: 11px;"></i>
+                </div>
+            </div>
+        </a>
     </div>
 
     <section class="features" id="features">
@@ -830,7 +889,7 @@
             </div>
         </div>
     </section>
-
+              
     <section class="team" id="team">
         <div class="container">
             <div class="section-header">
@@ -867,6 +926,7 @@
         </div>
     </section>
 
+    <!-- SEZIONE CTA CORRETTA - CENTRALE E CON INSTAGRAM -->
     <section class="cta">
         <div class="container">
             <h2 class="cta-title" data-translate="cta-title">Join the BRVBTC Ecosystem</h2>
@@ -874,6 +934,7 @@
             <div class="hero-actions">
                 <a href="https://github.com/josat123/BRVBTC" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> <span data-translate="github">GitHub</span></a>
                 <a href="https://t.me/brvbtc_official" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i> <span data-translate="telegram">Telegram</span></a>
+                <a href="https://www.instagram.com/brvbtc_by_dwj/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
             </div>
         </div>
     </section>
@@ -888,6 +949,7 @@
                         <a href="https://github.com/josat123/BRVBTC" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                         <a href="https://t.me/brvbtc_official" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
                         <a href="https://x.com/brvbtc536261" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/brvbtc_by_dwj/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-links"><h4 data-translate="resources">Resources</h4><a href="https://github.com/josat123/BRVBTC" target="_blank">GitHub</a><a href="https://etherscan.io/address/0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d" target="_blank">Etherscan L1</a><a href="https://polygonscan.com/address/0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB" target="_blank">Polygonscan L2</a></div>
@@ -899,7 +961,6 @@
     </footer>
 
     <script>
-        
         const translations = {
             en: {
                 'nav-home': 'Home', 'nav-features': 'Features', 'nav-tokenomics': 'Tokenomics', 'nav-bridge': 'Bridge', 'nav-ecosystem': 'Ecosystem', 'nav-team': 'Team',
