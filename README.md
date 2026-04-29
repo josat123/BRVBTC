@@ -133,6 +133,8 @@ A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 - **Initial Liquidity:** $88.47 (enables trading and price discovery)
 - **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
 
+### On Polygon (L2)
+
 A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 
 - **Pool Address:** `0x67366782805870060151383f4bbff9dab53e5cd6`
