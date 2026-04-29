@@ -123,7 +123,15 @@ Fees: Optional (configurable, max 0.3%), currently 0.05%
 
 ## 💧 Liquidity & Trading
 
-### On Polygon (L2)
+### On Arbitrum (L2)
+
+A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
+
+- **Pool Address:** `0x360E68faCcca8cA495c1B759Fd9EEe466db9FB32`
+- **Currency0 (WBTC):** `0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f`
+- **Currency1 (BRVBTC):** `0x71585d90E726b82c3C435212995Fe49ADef98343`
+- **Initial Liquidity:** $88.47 (enables trading and price discovery)
+- **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
 
 A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 
@@ -290,4 +298,3 @@ Discord/Telegram: (to be announced)
 *"After 4 years of work, two tokens, a cross-chain bridge, and a vision — BRVBTC is finally live. It's not about promises. It's about math, transparency, and real value. 1 BRVBTC = 1 USD, backed by 50% WBTC, available natively on Ethereum and Polygon. We are at 0 today, but the fundamentals are already 100. The rest is up to the community."*
 
 — The BRVBTC Team
-
