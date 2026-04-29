@@ -147,7 +147,7 @@ A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 
 A **BRVBTC / WBTC** pool is also available on **Uniswap V4** on Ethereum Mainnet:
 
-- **Pool Address:** `0x9bc0f4d4b31adea0c7fde6f40a778e4ce7bc652d`
+- **Pool Address:** `0x000000000004444c5dc75cB358380D2e3dE08A90`
 - **Currency0 (WBTC):** `0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599`
 - **Currency1 (BRVBTC):** `0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d`
 - **Initial Liquidity:** $105 (enables trading and price discovery)
