@@ -1,10 +1,10 @@
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.27;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
 interface IERC20TokenMetadata {
@@ -43,15 +43,15 @@ contract BolivarRepublicaVenezuelaBTC is ERC20, ERC20Burnable, ERC20Permit, Reen
         _;
     }
 
-    constructor(string memory initialMetadataURI, address _poolManager) 
+    constructor(string memory initialMetadataURI) 
         ERC20("Bolivar Republica Venezuela BTC", "BRVBTC")
         ERC20Permit("Bolivar Republica Venezuela BTC")
     {
         require(bytes(initialMetadataURI).length > 0, "Metadata URI required");
         
-        // WBTC on Ethereum L1
-        WBTC = IERC20(0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599);
-        uniswapPoolManager = _poolManager;
+        // WBTC su BSC mainnet
+        WBTC = IERC20(0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c);
+        uniswapPoolManager = 0x000000000004444c5dc75cB358380D2e3dE08A90;
         
         _tokenURI = initialMetadataURI;
         metadataOwner = msg.sender;
@@ -83,15 +83,17 @@ contract BolivarRepublicaVenezuelaBTC is ERC20, ERC20Burnable, ERC20Permit, Reen
         
         if (newTotalSupply > CAP) revert CapExceeded();
         
+        // CONTROLLO PRIMA di prendere i fondi (evita falso honeypot)
+        uint256 newReserve = totalReserve + wbtcAmount;
+        uint256 newRatio = (newReserve * TOKEN_PER_WBTC * PRECISION) / newTotalSupply;
+        if (newRatio < RESERVE_RATIO) {
+            revert BelowMinimumReserveRatio(newRatio, RESERVE_RATIO);
+        }
+        
         bool success = WBTC.transferFrom(msg.sender, address(this), wbtcAmount);
         if (!success) revert InvalidWBTCTransfer();
         
-        totalReserve += wbtcAmount;
-        
-        if (_getCurrentReserveRatio() < RESERVE_RATIO) {
-            revert BelowMinimumReserveRatio(_getCurrentReserveRatio(), RESERVE_RATIO);
-        }
-        
+        totalReserve = newReserve;
         _mint(msg.sender, tokenAmount);
         
         emit Minted(msg.sender, tokenAmount, wbtcAmount);
@@ -115,7 +117,6 @@ contract BolivarRepublicaVenezuelaBTC is ERC20, ERC20Burnable, ERC20Permit, Reen
         }
         
         _burn(msg.sender, tokenAmount);
-        
         totalReserve = newReserve;
         
         bool success = WBTC.transfer(msg.sender, wbtcAmount);
@@ -144,7 +145,6 @@ contract BolivarRepublicaVenezuelaBTC is ERC20, ERC20Burnable, ERC20Permit, Reen
         
         uint256 newReserve = totalReserve + wbtcAmount;
         uint256 newRatio = (newReserve * TOKEN_PER_WBTC * PRECISION) / newSupply;
-        
         return newRatio >= RESERVE_RATIO;
     }
 
@@ -157,12 +157,11 @@ contract BolivarRepublicaVenezuelaBTC is ERC20, ERC20Burnable, ERC20Permit, Reen
         
         uint256 newReserve = totalReserve - wbtcAmount;
         uint256 newRatio = (newReserve * TOKEN_PER_WBTC * PRECISION) / newSupply;
-        
         return newRatio >= RESERVE_RATIO;
     }
 
     function getPriceInWBTC() external pure returns (uint256) {
-        return 1 ether / (TOKEN_PER_WBTC / 10**18);
+        return (1 ether * 10**WBTC_DECIMALS) / TOKEN_PER_WBTC;
     }
 
     function decimals() public view virtual override returns (uint8) {
@@ -180,7 +179,6 @@ contract BolivarRepublicaVenezuelaBTC is ERC20, ERC20Burnable, ERC20Permit, Reen
     function _getCurrentReserveRatio() private view returns (uint256) {
         uint256 currentSupply = totalSupply();
         if (currentSupply == 0) return 100 * PRECISION;
-        
         return (totalReserve * TOKEN_PER_WBTC * PRECISION) / currentSupply;
     }
 }
