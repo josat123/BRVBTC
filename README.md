@@ -170,12 +170,19 @@ All contracts are verified on:
 - **Gas limits** – `MIN_GAS_LIMIT` = 200,000, `MAX_GAS_LIMIT` = 5,000,000. Ensure the gas provided is sufficient for finalization.
 - **Fee‑on‑transfer tokens** – These are not supported if registered as `taxed = true` (the contract reverts). Use `taxed = false` for such tokens.
 
+## 🔄 Supported Flows
+Direction	Supported	Notes
+Ethereum → Base	✅ Yes	Bidirectional (lock & mint, burn & release).
+Base → Ethereum	✅ Yes	Bidirectional.
+Polygon → Ethereum	❌ No (broken)	Withdrawals on Polygon are currently non‑operational due to a contract state lock (ReentrancyGuard stuck). Use Base for all L2 → L1 withdrawals.
+Ethereum → Polygon	❌ No	Due to the 1:1 token mapping on L1 (same L1 token cannot map to two different remote tokens). To enable this, either a separate L1 wrapper token or a contract upgrade is needed.
+
+
 ## 🔮 Future Development
 
 - Full bidirectional support for Polygon (via a separate L1 wrapper token or contract mapping upgrade).  
 - Integration with Arbitrum (using Arbitrum's native bridge, which requires an adaptation similar to Polygon).  
 - Emergency pause mechanism (already present in `setPaused`).
-
 ---
 A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 
