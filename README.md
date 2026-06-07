@@ -105,26 +105,78 @@ Contract sends back equivalent WBTC (if reserve allows)
 
 Reserve and supply decrease, ratio is maintained
 
-🌉 Cross-Chain Architecture (The Bridge)
-BRVBTC exists natively on both Ethereum (L1) and Polygon (L2) — not as wrapped tokens, but as the same token on both chains, thanks to our custom UniversalBridge.
+# 🌉 UniversalBridge – Cross-Chain BRVBTC
 
-Bridge Contracts
-Chain	BRVBTC Address	Bridge Address	Messenger Address
-Ethereum (L1)	0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d	0xe8681d55585FcDA6a4a39c9a59f39b63fbBa88e8	0x25ace71c97b33cC4724cf772e9b8B8F980f9d3B5
-Polygon (L2)	0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB	0x0Ef6a63a16fB21dD8398183a154596953Ce4E835	0x25ace71c97b33cC4724cf772e9b8B8F980f9d3B5
-How the Bridge Works
-Deposit to L2: Lock BRVBTC on L1, mint on L2
+BRVBTC exists natively on Ethereum (L1), Base (L2), and Polygon (L2) — not as wrapped tokens, but as the same token on each chain, thanks to our `UniversalBridge` contract adapted to each chain's native cross-chain messenger.
 
-Withdraw to L1: Burn BRVBTC on L2, release on L1
+## 📌 Deployed Bridge Contracts
 
-Security: EIP-712 signatures, nonces, onlyMessenger modifiers, replay protection
+| Chain | BRVBTC Address | Bridge Address | Messenger / Adapter |
+|-------|----------------|----------------|----------------------|
+| **Ethereum (L1)** | `0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d` | `0x95EEf9bCb0bAC8742CfBb0592cBEd367b90cB07d` | `0x25ace71c97b33cC4724cf772e9b8B8F980f9d3B5` (L1CrossDomainMessenger) |
+| **Base (L2)** | `0x0Ef6a63a16fB21dD8398183a154596953Ce4E835` | `0x1fB0948080E16e55c63277c43B9B45be39a5fc5F` | `0x4200000000000000000000000000000000000007` (L2CrossDomainMessenger) |
+| **Polygon (L2)** | `0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB` | `0x31C9F16e4Fee8C097a700Ea6a1010bC8807D27Fe` | `0x8397259c983751DAf40400790063935a11afa28a` (FxChild) |
 
-Fees: Optional (configurable, max 0.3%), currently 0.05%
+## 🔄 Supported Flows
 
-## 💧 Liquidity & Trading
+| Direction | Supported | Notes |
+|-----------|------------|-------|
+| Ethereum → Base | ✅ Yes | Bidirectional (lock & mint, burn & release). |
+| Base → Ethereum | ✅ Yes | Bidirectional. |
+| Polygon → Ethereum | ✅ Yes | Withdraw only (burn on Polygon, release on Ethereum). |
+| Ethereum → Polygon | ❌ No | Due to the 1:1 token mapping on L1 (same L1 token cannot map to two different remote tokens). To enable this, either a separate L1 wrapper token or a contract upgrade is needed. |
 
-### On Arbitrum (L2)
+## 🧠 Architecture & Adaptations
 
+`UniversalBridge` was originally designed to work with the **CrossDomainMessenger** of OP Stack chains (Optimism, Base, Mode). To integrate it with **Polygon (PoS)**, we adapted the contract to use the **FxPortal**:
+
+- On L1, the messenger is `FxRoot` (`0xfe5e5D361b2ad62c541bAb87C45a0B9B018389a2`).
+- On L2, the messenger is `FxChild` (`0x8397259c983751DAf40400790063935a11afa28a`).
+
+Polygon support is **one-way (L2 → L1)** because the current contract uses a 1:1 mapping for remote tokens on L1. Full bidirectional support would require a separate L1 token or an upgraded contract with multi‑chain mapping.
+
+## ⚙️ How the Bridge Works
+
+1. **Deposit from L1 to L2 (e.g., Ethereum → Base)**  
+   - User approves `grossAmount` (including any tax).  
+   - Bridge **locks** tokens on L1 and sends a cross‑chain message.  
+   - On L2, bridge **mints** the equivalent amount to the recipient.
+
+2. **Withdraw from L2 to L1 (e.g., Base → Ethereum)**  
+   - User calls `withdrawToL1`.  
+   - Bridge **burns** tokens on L2 and sends a message to L1.  
+   - On L1, bridge **releases** the previously locked tokens to the recipient.
+
+3. **Security**  
+   - `onlyMessenger` and `onlyRemoteBridge` modifiers ensure only the authenticated messenger can finalize messages.  
+   - Unique nonces (`depositNonce` / `withdrawNonce`) and message hashes prevent replay attacks.  
+   - `processedMessages` mapping prevents double finalization.
+
+4. **Fees**  
+   - Optional, configurable by owner (max 0.3%). Current fee: **0.05%** on all chains.  
+   - Fees are paid in the deposited token and sent to `feeCollector`.
+
+## 🧪 Testing & Verification
+
+All contracts are verified on:
+
+- **Ethereum**: [Etherscan](https://etherscan.io/address/0x95EEf9bCb0bAC8742CfBb0592cBEd367b90cB07d)
+- **Base**: [BaseScan](https://basescan.org/address/0x1fB0948080E16e55c63277c43B9B45be39a5fc5F)
+- **Polygon**: [PolygonScan](https://polygonscan.com/address/0x31C9F16e4Fee8C097a700Ea6a1010bC8807D27Fe)
+
+## 📝 Known Limitations
+
+- **Polygon one‑way only** – As detailed above, the bridge on Polygon only supports withdrawals to Ethereum. For deposits from Ethereum to Polygon, use an alternative bridge or wait for a contract upgrade.
+- **Gas limits** – `MIN_GAS_LIMIT` = 200,000, `MAX_GAS_LIMIT` = 5,000,000. Ensure the gas provided is sufficient for finalization.
+- **Fee‑on‑transfer tokens** – These are not supported if registered as `taxed = true` (the contract reverts). Use `taxed = false` for such tokens.
+
+## 🔮 Future Development
+
+- Full bidirectional support for Polygon (via a separate L1 wrapper token or contract mapping upgrade).  
+- Integration with Arbitrum (using Arbitrum's native bridge, which requires an adaptation similar to Polygon).  
+- Emergency pause mechanism (already present in `setPaused`).
+
+---
 A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 
 - **Pool Address:** `0x360E68faCcca8cA495c1B759Fd9EEe466db9FB32`
