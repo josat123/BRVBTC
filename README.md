@@ -173,6 +173,10 @@ All contracts are verified on:
 
 - **Ethereum**: [Etherscan](https://etherscan.io/address/0x95EEf9bCb0bAC8742CfBb0592cBEd367b90cB07d)
 - **Base**: [BaseScan](https://basescan.org/address/0x1fB0948080E16e55c63277c43B9B45be39a5fc5F)
+- **ArbiTrum**: [ArbiScan](https://arbiscan.io/address/0xa5c96d77c280b9f4ba13cd4064c4864cf69a3bcb)
+- **Binance**: [BscScan](https://bscscan.com/token/0x0ef6a63a16fb21dd8398183a154596953ce4e835)
+- **Avalance**: [SnowScan](https://snowscan.xyz/token/0x0ef6a63a16fb21dd8398183a154596953ce4e835)
+- **Unchain**: [UniScan](https://uniscan.xyz/address/0x2c8e3dd1d7cdf1636d8c69c2af51c9653e562dab)
 - **Polygon**: [PolygonScan](https://polygonscan.com/address/0x31C9F16e4Fee8C097a700Ea6a1010bC8807D27Fe)
 
 ## 📝 Known Limitations
