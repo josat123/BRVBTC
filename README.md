@@ -207,6 +207,47 @@ A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 - **Initial Liquidity:** $88.47 (enables trading and price discovery)
 - **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
 
+### On Ethereum (L1)
+
+A **BRVBTC / WBTC** pool is also available on **Uniswap V4** on Ethereum Mainnet:
+
+- **Pool Address:** `0xb08381ddb7e79737540a07743794b5df5efbf06ec99423ba9a135a071f9d2a55`
+- **Currency0 (WBTC):** `0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599`
+- **Currency1 (BRVBTC):** `0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d`
+- **Initial Liquidity:** $3300 (enables trading and price discovery)
+- **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
+
+### On Bse (L2)
+
+A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
+
+- **Pool Address:** `0x7d1c63ca7fa141a130aea749a338d12c5add972deca7de58aa50d7a72820670e`
+- **Currency0 (WBTC):** `0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf)`
+- **Currency1 (BRVBTC):** `0x0Ef6a63a16fB21dD8398183a154596953Ce4E835)`
+- **Initial Liquidity:** $185.25 (enables trading and price discovery)
+- **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
+
+### On Bsc (L2)
+
+A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
+
+- **Pool Address:** `0xc6a348816281339b55ac42b937ed4be033716c3f4a7e8fa874a66d836374bf1d`
+- **Currency0 (WBTC):** `0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c`
+- **Currency1 (BRVBTC):** `0x0Ef6a63a16fB21dD8398183a154596953Ce4E835`
+- **Initial Liquidity:** $8.59 (enables trading and price discovery)
+- **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
+
+### On Arbitrum (L2)
+
+A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
+
+- **Pool Address:** `0xd0432b9499dc5f850504a294285af23b9869a793e6725f149be22cf518d9cada`
+- **Currency0 (WBTC):** `0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f`
+- **Currency1 (BRVBTC):** `0x71585d90E726b82c3C435212995Fe49ADef98343`
+- **Initial Liquidity:** $355 (enables trading and price discovery)
+- **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
+
+
 ### On Polygon (L2)
 
 A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
@@ -217,14 +258,24 @@ A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 - **Initial Liquidity:** $100 (enables trading and price discovery)
 - **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
 
-### On Ethereum (L1)
+### On Avalance (L2)
 
-A **BRVBTC / WBTC** pool is also available on **Uniswap V4** on Ethereum Mainnet:
+A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 
-- **Pool Address:** `0x000000000004444c5dc75cB358380D2e3dE08A90`
-- **Currency0 (WBTC):** `0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599`
-- **Currency1 (BRVBTC):** `0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d`
-- **Initial Liquidity:** $105 (enables trading and price discovery)
+- **Pool Address:** `0x7d1c63ca7fa141a130aea749a338d12c5add972deca7de58aa50d7a72820670e`
+- **Currency0 (WBTC):** `0x0555E30da8f98308EdB960aa94C0Db47230d2B9c`
+- **Currency1 (BRVBTC):** `0x0ef6a63a16fb21dd8398183a154596953ce4e835`
+- **Initial Liquidity:** $1 (enables trading and price discovery)
+- **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
+
+### On Unchain (L2)
+
+A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
+
+- **Pool Address:** `0x...commingsoon`
+- **Currency0 (WBTC):** `0x...(FIX)`
+- **Currency1 (BRVBTC):** `0x2c8E3dd1d7Cdf1636d8C69c2af51c9653E562DAb`
+- **Initial Liquidity:** $0 (enables trading and price discovery)
 - **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
 
 > ⚠️ **Note:** The L1 pool uses **native WBTC** (`0x2260FAC5...`), while the L2 pool uses **posWBTC** (`0x1BFD6703...`). Both represent the same underlying Bitcoin value.
