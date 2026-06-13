@@ -135,7 +135,7 @@ Other Chain:
 | Bsc is comminsoon
 | Avax is commingsoon
 | Unchain is commingsoon
-| Or used layerzero.network Bridge Raccomanded.
+| Or used : layerzero.network - Bridge recommended.
 
 ## 🧠 Architecture & Adaptations
 
