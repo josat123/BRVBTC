@@ -116,10 +116,10 @@ BRVBTC exists natively on Ethereum (L1), Base (L2), and Polygon (L2) — not as 
 | **Ethereum (L1)** | `0x9bc0F4d4B31AdEa0c7Fde6f40a778E4Ce7Bc652d` | `0x95EEf9bCb0bAC8742CfBb0592cBEd367b90cB07d` | `0x25ace71c97b33cC4724cf772e9b8B8F980f9d3B5` (L1CrossDomainMessenger) |
 | **Base (L2)** | `0x0Ef6a63a16fB21dD8398183a154596953Ce4E835` | `0x1fB0948080E16e55c63277c43B9B45be39a5fc5F` | `0x4200000000000000000000000000000000000007` (L2CrossDomainMessenger) |
 | **Arbitrum (L2)** | `0x71585d90E726b82c3C435212995Fe49ADef98343` | `inbox : 0x4Dbd4fc535Ac27206064B68FfCf827b0A60BAB3f` | `outbox : x0B9857ae2D4A3DBe74ffE1d7DF045bb7F96E4840` (FxChild) |
-| **Bsc (L2)** | `0x0Ef6a63a16fB21dD8398183a154596953Ce4E835` | `commingsoon` | `commingsoon` (FxChild) |
-| **Avax (L2)** | `0x0ef6a63a16fb21dd8398183a154596953ce4e835` | `commingsoon` | `commingsoon` (FxChild) |
-| **Polygon (L2)** | `0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB` | `commingsoon` | `commingsoon` (FxChild) |
-| **Unchain (L2)** | `0x2c8E3dd1d7Cdf1636d8C69c2af51c9653E562DAb` | `commingsoon` | `commingsoon` (FxChild) |
+| **Bsc (L2)** | `0x0Ef6a63a16fB21dD8398183a154596953Ce4E835` | `commingsoon` | `commingsoon`  |
+| **Avax (L2)** | `0x0ef6a63a16fb21dd8398183a154596953ce4e835` | `commingsoon` | `commingsoon`  |
+| **Polygon (L2)** | `0xa5c96d77C280B9F4bA13cd4064C4864Cf69a3BCB` | `commingsoon` | `commingsoon`  |
+| **Unchain (L2)** | `0x2c8E3dd1d7Cdf1636d8C69c2af51c9653E562DAb` | `commingsoon` | `commingsoon`  |
 
 
 
@@ -135,7 +135,7 @@ Other Chain:
 | Bsc is comminsoon
 | Avax is commingsoon
 | Unchain is commingsoon
-Or used layerzero.network .
+| Or used layerzero.network Bridge Raccomanded.
 
 ## 🧠 Architecture & Adaptations
 
