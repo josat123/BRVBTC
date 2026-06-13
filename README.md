@@ -273,7 +273,7 @@ A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 
 - **Pool Address:** `0x...commingsoon`
-- **Currency0 (WBTC):** `0x...(FIX)`
+- **Currency0 (WBTC):** `0x0555e30da8f98308edb960aa94c0db47230d2b9c)`
 - **Currency1 (BRVBTC):** `0x2c8E3dd1d7Cdf1636d8C69c2af51c9653E562DAb`
 - **Initial Liquidity:** $0 (enables trading and price discovery)
 - **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
