@@ -272,10 +272,10 @@ A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 
 A **BRVBTC / WBTC** pool has been initialized on **Uniswap V4**:
 
-- **Pool Address:** `0x...commingsoon`
+- **Unchain:** `0x43245976389979c7861796269253bed514a9b7b2f8eeb6350a610333d5c11cf3`
 - **Currency0 (WBTC):** `0x0555e30da8f98308edb960aa94c0db47230d2b9c)`
 - **Currency1 (BRVBTC):** `0x2c8E3dd1d7Cdf1636d8C69c2af51c9653E562DAb`
-- **Initial Liquidity:** $0 (enables trading and price discovery)
+- **Initial Liquidity:** $3.88 (enables trading and price discovery)
 - **Price:** Automatically stabilized at ~1 USD thanks to the mint/burn mechanism
 
 > ⚠️ **Note:** The L1 pool uses **native WBTC** (`0x2260FAC5...`), while the L2 pool uses **posWBTC** (`0x1BFD6703...`). Both represent the same underlying Bitcoin value.
